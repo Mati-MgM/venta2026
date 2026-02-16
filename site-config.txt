@@ -1,0 +1,79 @@
+// ============================================================
+// CONFIGURACIÓN DEL SITIO - GARAGE SALE
+// ============================================================
+// Aquí puedes editar todos los textos de tu catálogo
+
+export const siteConfig = {
+  // INFORMACIÓN GENERAL
+  siteName: "Garage Sale 2026",
+  siteDescription: "Encuentra artículos de calidad a precios increíbles",
+  
+  // ENCABEZADO
+  header: {
+    title: "🏠 Venta de Garage",
+    subtitle: "Todo debe irse - Precios negociables"
+  },
+  
+  // FILTROS
+  filters: {
+    allItemsLabel: "Todo",
+    showAvailableOnly: "Mostrar solo disponibles",
+    searchPlaceholder: "Buscar productos..."
+  },
+  
+  // TARJETAS DE PRODUCTO
+  productCard: {
+    availableLabel: "Disponible",
+    soldLabel: "Vendido",
+    viewDetailsButton: "Ver detalles",
+    priceSymbol: "$"
+  },
+  
+  // MODAL DE DETALLES
+  productModal: {
+    closeButton: "Cerrar",
+    descriptionTitle: "Descripción",
+    conditionTitle: "Condición",
+    contactButton: "💬 Contactar para comprar",
+    categoryLabel: "Categoría:",
+    priceLabel: "Precio:",
+    statusLabel: "Estado:"
+  },
+  
+  // MENSAJES
+  messages: {
+    noProducts: "No se encontraron productos",
+    loading: "Cargando productos...",
+    error: "Error al cargar productos"
+  },
+  
+  // INFORMACIÓN DE CONTACTO
+  contact: {
+    // Cambia este número por el tuyo (formato internacional)
+    whatsappNumber: "59898765432", // Ejemplo: Uruguay
+    
+    // Mensaje que se enviará por WhatsApp cuando alguien haga clic en "Contactar"
+    whatsappMessageTemplate: (productTitle: string) => 
+      `Hola! Me interesa el producto: ${productTitle}. ¿Está disponible?`
+  },
+  
+  // PIE DE PÁGINA
+  footer: {
+    text: "© 2026 Garage Sale. Todos los precios son negociables.",
+    contactText: "Contacto:",
+    phoneNumber: "+598 98 765 432" // Cambia por tu número
+  }
+}
+
+// ============================================================
+// ESTILOS Y COLORES (opcional)
+// ============================================================
+export const theme = {
+  colors: {
+    primary: "#3b82f6",      // Azul principal
+    primaryHover: "#2563eb", // Azul hover
+    success: "#10b981",      // Verde (disponible)
+    danger: "#ef4444",       // Rojo (vendido)
+    gray: "#6b7280"          // Gris para textos
+  }
+}

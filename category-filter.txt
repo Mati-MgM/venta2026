@@ -1,0 +1,35 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
+import type { Category } from "@/lib/products-config"
+import { siteConfig } from "@/lib/site-config"
+
+interface CategoryFilterProps {
+  categories: Category[]
+  selected: Category | null
+  onSelect: (category: Category | null) => void
+}
+
+export function CategoryFilter({ categories, selected, onSelect }: CategoryFilterProps) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      <Button
+        variant={selected === null ? "default" : "outline"}
+        onClick={() => onSelect(null)}
+        className="rounded-full"
+      >
+        {siteConfig.filters.allItemsLabel}
+      </Button>
+      {categories.map((category) => (
+        <Button
+          key={category}
+          variant={selected === category ? "default" : "outline"}
+          onClick={() => onSelect(category)}
+          className="rounded-full"
+        >
+          {category}
+        </Button>
+      ))}
+    </div>
+  )
+}

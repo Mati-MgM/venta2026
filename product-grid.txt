@@ -1,0 +1,63 @@
+"use client"
+
+import { useState } from "react"
+import { ProductCard } from "@/components/product-card"
+import { ProductModal } from "@/components/product-modal"
+import { CategoryFilter } from "@/components/category-filter"
+import { products, categories, type Product, type Category } from "@/lib/products-config"
+import { siteConfig } from "@/lib/site-config"
+
+export function ProductGrid() {
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null)
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const filteredProducts = selectedCategory
+    ? products.filter((p) => p.category === selectedCategory)
+    : products
+
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedProduct(null)
+  }
+
+  return (
+    <div className="space-y-8">
+      <CategoryFilter
+        categories={categories}
+        selected={selectedCategory}
+        onSelect={setSelectedCategory}
+      />
+
+      {filteredProducts.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-muted-foreground text-lg">
+            {siteConfig.messages.noProducts}
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={() => handleProductClick(product)}
+            />
+          ))}
+        </div>
+      )}
+
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        whatsappNumber={siteConfig.contact.whatsappNumber}
+      />
+    </div>
+  )
+}
