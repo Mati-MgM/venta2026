@@ -183,7 +183,7 @@
         }
         
         .product-card:hover .product-image {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
         
         .badge {
@@ -276,8 +276,9 @@
         }
         
         .modal-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--gray-200);
+        padding: 1.5rem;
+        padding-right: 4rem;
+        border-bottom: 1px solid var(--gray-200);
             position: sticky;
             top: 0;
             background: white;
@@ -290,23 +291,36 @@
             padding-right: 2rem;
         }
         
-        .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 2rem;
-            height: 2rem;
-            border: none;
-            background: none;
-            cursor: pointer;
-            color: var(--gray-600);
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-        
-        .close-btn:hover {
-            color: var(--gray-900);
-        }
+      .close-btn {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        background: var(--gray-100);
+        border-radius: 50%;
+        cursor: pointer;
+        color: var(--gray-700);
+        font-size: 1.75rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        z-index: 100;
+    }
+    
+    .close-btn:hover {
+        background: var(--danger);
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .close-btn:active {
+        transform: scale(0.95);
+    }
+    }
         
         .modal-body {
             padding: 1.5rem;
@@ -326,14 +340,15 @@
             overflow: hidden;
         }
         
-        .gallery-main img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      .gallery-main img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: var(--gray-100);
+    }
         
         .gallery-nav {
             position: absolute;
@@ -503,7 +518,7 @@
         /* ============================================
            RESPONSIVE
            ============================================ */
-        @media (max-width: 640px) {
+            @media (max-width: 640px) {
             .product-grid {
                 grid-template-columns: 1fr;
             }
@@ -517,6 +532,13 @@
                 border-radius: 0;
                 max-height: 100vh;
             }
+            
+            .close-btn {
+                width: 3.5rem;
+                height: 3.5rem;
+                font-size: 2rem;
+            }
+
         }
         
         /* ============================================
