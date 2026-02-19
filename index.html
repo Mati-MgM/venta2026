@@ -264,16 +264,17 @@
             justify-content: center;
         }
         
-        .modal-content {
-            background: white;
-            border-radius: 0.5rem;
-            max-width: 600px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
+      .modal-content {
+        background: white;
+        border-radius: 0.5rem;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
         
         .modal-header {
         padding: 1.5rem;
@@ -322,15 +323,16 @@
     }
     }
         
-        .modal-body {
-            padding: 1.5rem;
+      .modal-body {
+        padding: 1.5rem;
+        overflow-y: auto;
+        flex: 1;
         }
         
-        .image-gallery {
-            position: relative;
-            margin-bottom: 1rem;
-        }
-        
+       .image-gallery {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
         .gallery-main {
             position: relative;
             width: 100%;
@@ -425,11 +427,12 @@
         }
         
         .price-status {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 0 0.25rem;
+    }
         
         .modal-price {
             font-size: 2rem;
@@ -437,8 +440,8 @@
             color: var(--primary);
         }
         
-        .detail-section {
-            margin-bottom: 1.5rem;
+       .detail-section {
+        margin-bottom: 1.75rem;
         }
         
         .detail-section h3 {
@@ -447,10 +450,11 @@
             color: var(--gray-900);
         }
         
-        .detail-section p {
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
+      .detail-section p {
+        color: var(--gray-600);
+        line-height: 1.65;
+        padding-right: 0.5rem;
+    }
         
         .category-label {
             font-size: 0.875rem;
@@ -902,8 +906,8 @@
                 category: "Ropa",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
+
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -915,8 +919,8 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=800&fit=crop&crop=top"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
+                
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -928,8 +932,7 @@
                 category: "Muebles",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
-                    "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -941,8 +944,7 @@
                 category: "Electrónica",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&fit=crop&crop=top"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.pngy"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -954,8 +956,7 @@
                 category: "Ropa",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -967,8 +968,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&fit=crop&crop=top"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -980,8 +980,7 @@
                 category: "Muebles",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -993,8 +992,7 @@
                 category: "Electrónica",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1585790050230-5dd28404f0a1?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1585790050230-5dd28404f0a1?w=800&fit=crop&crop=top"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1006,8 +1004,7 @@
                 category: "Ropa",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1019,8 +1016,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1032,8 +1028,7 @@
                 category: "Muebles",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1045,8 +1040,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&fit=crop&crop=entropy",
-                    "https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&fit=crop&crop=bottom"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1060,8 +1054,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1073,8 +1066,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1086,8 +1078,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1099,8 +1090,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1112,8 +1102,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1125,8 +1114,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1138,8 +1126,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1151,8 +1138,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1164,8 +1150,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1177,8 +1162,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1190,8 +1174,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1203,8 +1186,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1216,8 +1198,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1229,8 +1210,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
@@ -1242,8 +1222,7 @@
                 category: "Varios",
                 status: "Disponible",
                 images: [
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen",
-                    "https://via.placeholder.com/800x600/CCCCCC/666666?text=Sin+Imagen+2"
+                    "f080139b-fdc0-4f6d-b37c-318854d08b39.png"
                 ],
                 description: "Descripción del artículo próximamente.",
                 condition: "Completar condición del artículo."
