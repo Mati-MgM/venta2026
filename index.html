@@ -321,13 +321,14 @@
     .close-btn:active {
         transform: scale(0.95);
     }
-    }
         
       .modal-body {
         padding: 1.5rem;
+        padding-bottom: 2rem;  
         overflow-y: auto;
         flex: 1;
-        }
+        -webkit-overflow-scrolling: touch;  
+    }
         
        .image-gallery {
         position: relative;
@@ -531,10 +532,11 @@
                 font-size: 1.25rem;
             }
             
-            .modal-content {
+           .modal-content {
                 margin: 0;
                 border-radius: 0;
                 max-height: 100vh;
+                height: 100vh;  
             }
             
             .close-btn {
