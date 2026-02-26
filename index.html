@@ -1639,9 +1639,9 @@
         function renderProducts() {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
-            const filtered = (selectedCategory
-    ? PRODUCTS.filter(p => p.category === selectedCategory)
-    : PRODUCTS).filter(p => p.title.trim().toLowerCase() !== 'artículo próximamente');
+            const filtered = selectedCategory
+    ? PRODUCTS.filter(p => p.category === selectedCategory && p.title.trim().toLowerCase() !== 'artículo próximamente')
+    : PRODUCTS;
             if (filtered.length === 0) {
                 grid.innerHTML = '<div class="no-products"><p>No se encontraron productos</p></div>';
                 return;
