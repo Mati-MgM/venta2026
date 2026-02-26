@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -493,11 +493,12 @@
         }
 
         .badge {
-            padding: 0.25rem 0.75rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 0.375rem;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: 600;
             white-space: nowrap;
+            opacity: 0.85;
         }
 
         .product-image-container .badge {
@@ -1697,12 +1698,6 @@
             img.src = product.images[0];
             imgContainer.appendChild(img);
 
-            if (product.images.length > 1) {
-                const count = document.createElement('div');
-                count.className = 'image-count';
-                count.textContent = `${product.images.length} fotos`;
-                imgContainer.appendChild(count);
-            }
 
             const badge = document.createElement('div');
             badge.className = `badge ${product.status === 'Disponible' ? 'available' : 'sold'}`;
