@@ -1547,9 +1547,13 @@
         function renderProducts() {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
-            const filtered = selectedCategory
+            const filtered = (selectedCategory
     ? PRODUCTS.filter(p => p.category === selectedCategory && p.title.trim().toLowerCase() !== 'artículo próximamente')
-    : PRODUCTS;
+    : PRODUCTS).slice().sort((a, b) => {
+        if (a.status === 'Vendido' && b.status !== 'Vendido') return 1;
+        if (a.status !== 'Vendido' && b.status === 'Vendido') return -1;
+        return 0;
+    });
             if (filtered.length === 0) {
                 grid.innerHTML = '<div class="no-products"><p>No se encontraron productos</p></div>';
                 return;
